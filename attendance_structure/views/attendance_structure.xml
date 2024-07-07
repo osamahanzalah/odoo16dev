@@ -1,0 +1,43 @@
+<odoo>
+    <record id="attendance_structure_form_view" model="ir.ui.view">
+        <field name="name">attendance.structure.form.view</field>
+        <field name="model">attendance.structure</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="flexible_hours"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Deduction Rules">
+                            <field name="structure_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                 <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                 </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="attendance_structure_action" model="ir.actions.act_window">
+        <field name="name">Attendance Structure</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">attendance.structure</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="attendance_structure_menu" name="Attendance Structure"
+              parent="attendance_structure_categ"
+              action="attendance_structure_action" sequence="5"/>
+</odoo>

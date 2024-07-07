@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="excel_col_seq_tree" model="ir.ui.view">
+            <field name="name">attendance.excel.col</field>
+            <field name="model">attendance.excel.col</field>
+            <field name="arch" type="xml">
+                <tree string="Excel Sheet Columns" editable="top">
+                    <field name="name" invisible="0"/>
+                    <field name="personal_id_col_index"/>
+                    <field name="date_col_index" />
+                    <field name="check_in_out_col_index" />
+<!--                    <field name="ar_lang" />-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_excel_records_seq" model="ir.actions.act_window">
+            <field name="name">Excel Columns</field>
+            <field name="res_model">attendance.excel.col</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="excel_col_seq_tree"/>
+        </record>
+
+
+        <menuitem action="action_excel_records_seq"
+                  id="attendance_records_seq_menu"
+                  parent="odoo_import_attendance.menu_hr_attendance_manage_attendances"
+                  sequence="9"
+        />
+    </data>
+</odoo>

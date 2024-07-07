@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cycle.config,cycle.config,model_cycle_config,,1,1,1,1
+access_cycle.config.line,cycle.config.line,model_cycle_config_line,,1,1,1,1

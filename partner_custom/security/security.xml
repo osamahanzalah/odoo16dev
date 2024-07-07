@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="partner_status_manager" model="res.groups">
+        <field name="name">Partner Status Manager</field>
+    </record>
+    <record id="partner_approval_manager" model="res.groups">
+        <field name="name">Partner Approval Manager</field>
+    </record>
+
+</odoo>

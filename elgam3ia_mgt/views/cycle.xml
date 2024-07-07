@@ -1,0 +1,167 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="cycle_config_tree_view">
+            <field name="name">cycle.config.tree.view</field>
+            <field name="model">cycle.config</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state == 'active'"
+                           decoration-warning="state == 'ended'"
+                           decoration-info="state == 'draft'">
+                    <field name="name"/>
+                    <field name="cycle_code"/>
+                    <field name="type" optional="show"/>
+                    <field name="months_no" optional="show"/>
+                    <field name="date_start" optional="show"/>
+                    <field name="date_end" optional="show"/>
+                    <field name="employee_id" optional="show"/>
+                    <field name="ambassador_commission" optional="show"/>
+                    <field name="agent_id" optional="show"/>
+                    <field name="state" decoration-success="state == 'active'" widget="badge"
+                           decoration-warning="state == 'ended'"
+                           decoration-info="state == 'draft'" optional="show"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="cycle_config_form_view">
+            <field name="name">cycle.config.form.view</field>
+            <field name="model">cycle.config</field>
+            <field name="arch" type="xml">
+                <form >
+                    <header>
+                        <button name="button_active" string="Activate" class="oe_highlight" states="draft" type="object"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box">
+
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"  force_save="1" required="0" />
+                            </h1>
+                        </div>
+
+                        <group>
+                             <group>
+
+                                 <field name="cycle_code" required="1" attrs="{'readonly': [('state', 'in', ['active','ended'])]}"/>
+                                 <field name="type" required="0"  attrs="{'readonly': [('state', 'in', ['active','ended'])]}"/>
+                                 <field name="months_no"  attrs="{'readonly': [('state', 'in', ['active','ended'])]}"/>
+                                 <label for="date_start" string="Date Range"/>
+                                 <div class="o_row">
+                                     <field name="date_start" required="0" widget="daterange" attrs="{'readonly': [('state', 'in', ['active','ended'])]}" options='{"related_end_date": "date_end"}'/>
+                                     <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>
+                                     <field name="date_end" required="0" widget="daterange" attrs="{'readonly': [('state', 'in', ['active','ended'])]}" options='{"related_start_date": "date_start"}'/>
+                                 </div>
+                            </group>
+                            <group>
+                                <field name="employee_id"  attrs="{'readonly': [('state', 'in', ['active','ended'])]}" />
+                                <field name="ambassador_commission" attrs="{'readonly': [('state', 'in', ['active','ended'])]}" />
+                                <field name="agent_id" required="0" attrs="{'readonly': [('state', 'in', ['active','ended'])]}" />
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page string="Lines">
+                                <field name="line_ids" attrs="{'readonly': [('state', 'in', ['active','ended'])]}" >
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+<!--                                        <field name="number" />-->
+                                        <field name="partner_id" />
+                                        <field name="partner_code"/>
+                                        <field name="amount" sum="total"/>
+                                        <button name="action_view_payments" type="object" icon="fa-dollar" attrs="{'invisible':[('payment_count','=',7)]}"
+                                                >
+                                            <field name="payment_count" widget="statinfo"/>
+                                        </button>
+                                        <button name="action_view_invoices" type="object" icon="fa-pencil-square-o" attrs="{'invisible':[('invoice_count','=',7)]}"
+                                                >
+                                            <field name="invoice_count" widget="statinfo"/>
+                                        </button>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="partner_id"/>
+                                                <field name="partner_code"/>
+                                                <field name="amount"/>
+                                            </group>
+                                            <group>
+
+                                            </group>
+                                            <notebook>
+                                                <page string="Payments">
+                                                    <field name="payment_ids">
+                                                        <tree>
+                                                            <field name="name"/>
+                                                            <field name="journal_id"/>
+                                                            <field name="state"/>
+                                                            <field name="date"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                                <page string="Invoices">
+                                                    <field name="invoice_ids">
+                                                        <tree>
+                                                            <field name="name"/>
+                                                            <field name="journal_id"/>
+                                                            <field name="state"/>
+                                                            <field name="date"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+                                </field>
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="cycle_config_search_view">
+            <field name="name">cycle.config.search.view</field>
+            <field name="model">cycle.config</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <field name="name" filter_domain="[('name', 'ilike', self), ]"/>
+                    <field name="cycle_code" filter_domain="[('cycle_code', 'ilike', self), ]"/>
+                    <field name="employee_id"/>
+                    <field name="agent_id"/>
+                    <separator/>
+                    <filter name="type_general" string="Type is general" domain="[('type','=','general_cycle')]"/>
+                    <filter name="type_private" string="Type is private" domain="[('type','=','private_cycle')]"/>
+                    <filter name="type_company" string="Type is company" domain="[('type','=','company_cycle')]"/>
+                    <filter name="group_type" string="Type" context="{'group_by':'type'}"/>
+
+                    <separator/>
+                    <filter name="state_draft" string="Draft" domain="[('state','=','draft')]"/>
+                    <filter name="state_active" string="Active" domain="[('state','=','active')]"/>
+                    <filter name="state_ended" string="Ended" domain="[('state','=','ended')]"/>
+                    <filter name="group_state" string="Status" context="{'group_by':'state'}"/>
+
+                    <separator/>
+
+                    <filter name="group_employee" string="Ambassador" context="{'group_by':'employee_id'}"/>
+                    <filter name="group_agent" string="Follow-up agent" context="{'group_by':'agent_id'}"/>
+                </search>
+            </field>
+        </record>
+        <record id="cycle_tree_action_window" model="ir.actions.act_window">
+            <field name="name">Cycles</field>
+            <field name="res_model">cycle.config</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+
+    </data>
+</odoo>

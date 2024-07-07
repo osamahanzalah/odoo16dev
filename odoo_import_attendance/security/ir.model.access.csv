@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_attendance_records_lines,attendance.records.lines,model_attendance_records_lines,,1,1,1,1
+access_import.attendance,import.attendance,model_import_attendance,,1,1,1,1
+access_attendance.excel.col,attendance.excel.col,model_attendance_excel_col,,1,1,1,1

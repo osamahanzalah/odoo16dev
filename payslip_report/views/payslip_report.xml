@@ -1,0 +1,32 @@
+<odoo>
+
+     <record id="payslip_report_pivot_view" model="ir.ui.view">
+            <field name="name">hr.payslip.line.pivot.view</field>
+            <field name="model">hr.payslip.line</field>
+            <field name="arch" type="xml">
+                <pivot string="Payslip Lines" sample="1">
+                    <field name="employee_id" type="row"/>
+                    <field name="salary_rule_id" type="col"/>
+                    <field name="amount" type="measure"/>
+                </pivot>
+            </field>
+     </record>
+
+    <record id="payslip_report_action" model="ir.actions.act_window">
+        <field name="name">Payslip Lines</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.payslip.line</field>
+        <field name="view_mode">pivot,tree</field>
+    </record>
+
+    <menuitem id="payroll_reporting_menu"
+              name="Reporting"
+              parent="om_hr_payroll.menu_hr_payroll_root"
+              sequence="90"/>
+
+    <menuitem id="payslip_line_report"
+              name="Payslip Lines"
+              parent="payroll_reporting_menu"
+              action="payslip_report_action"
+              sequence="5"/>
+</odoo>

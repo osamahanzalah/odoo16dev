@@ -1,0 +1,73 @@
+<odoo>
+    <record id="attendance_rules_form_view" model="ir.ui.view">
+        <field name="name">attendance.rules.form.view</field>
+        <field name="model">attendance.deduction.rules</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="duration_type"/>
+                            <field name="remaining"/>
+                            <label for="from_time" string="Duration"/>
+                            <div class="o_row">
+                                <span class="oe_form_field">From</span>
+                                <field name="from_time" widget="float_time"/>
+                                <span class="oe_form_field">To</span>
+                                <field name="to_time" widget="float_time"/>
+                            </div>
+                            <field name="penalty_base"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Repetition Rules">
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="repetition"/>
+                                    <field name="apply_hours"
+                                           attrs="{'column_invisible':[('parent.penalty_base','!=','hour')]}"/>
+                                    <field name="apply_days"
+                                           attrs="{'column_invisible':[('parent.penalty_base','!=','day')]}"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="attendance_rules_tree_view" model="ir.ui.view">
+        <field name="name">attendance.deduction.rules.tree</field>
+        <field name="model">attendance.deduction.rules</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name"/>
+                <field name="duration_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="attendance_rules_action" model="ir.actions.act_window">
+        <field name="name">Attendance Deduction Rules</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">attendance.deduction.rules</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="attendance_structure_categ" name="Attendance Rules" parent="hr_attendance.menu_hr_attendance_root"
+              sequence="25"/>
+
+    <menuitem id="attendance_deduction_rules_menu" name="Deduction Rules"
+              parent="attendance_structure_categ" action="attendance_rules_action" sequence="1"/>
+</odoo>

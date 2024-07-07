@@ -1,0 +1,31 @@
+<odoo>
+    <record id="employee_penalty_type_tree_view" model="ir.ui.view">
+        <field name="name">employee.penalty.type.tree.view</field>
+        <field name="model">employee.penalty.type</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="penalty_type_action" model="ir.actions.act_window">
+        <field name="name">Penalty Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.penalty.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="employee_penalty_categ"
+              name="Employee Penalty"
+              parent="om_hr_payroll.menu_hr_payroll_root"
+              sequence="80"/>
+
+    <menuitem id="penalty_type_menu"
+              name="Penalty Types"
+              parent="employee_penalty_categ"
+              action="penalty_type_action"
+              sequence="10"/>
+</odoo>

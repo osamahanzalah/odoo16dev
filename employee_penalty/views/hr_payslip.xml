@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_hr_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="om_hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Employee Penalties">
+                    <group>
+                        <field name="penalty_amount"/>
+                        <field name="penalty_ids">
+                            <tree>
+                                <field name="date"/>
+                                <field name="penalty_type_id"/>
+                                <field name="penalty_by"/>
+                                <field name="amount"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+                <page string="Employee Allowances">
+                    <group>
+                        <field name="allowances_amount"/>
+                        <field name="allowances_ids">
+                            <tree>
+                                <field name="date"/>
+                                <field name="allowances_type_id"/>
+                                <field name="allowances_by"/>
+                                <field name="amount"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

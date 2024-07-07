@@ -1,0 +1,52 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@data-key='hr']" position="inside">
+                <h2>Employee Documents</h2>
+                <div class="row mt16 o_settings_container" name="employee_document_type_setting">
+                    <div class="col-12 col-lg-6 o_setting_box" id="default_employee_document_type">
+                        <div class="o_setting_right_pane">
+                            <label for="doc_types_ids"/>
+                            <span class="fa fa-lg fa-building-o"
+                                  role="img" aria-label="Values set here are company-specific."/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Set default Employee document Types
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="doc_types_ids" widget="many2many_tags"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box" id="default_expiry_doc">
+                        <div class="o_setting_right_pane">
+                            <label for="no_month_expire"/>
+                            <span class="fa fa-lg fa-building-o"
+                                  role="img" aria-label="Values set here are company-specific."/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Set No. of Months for Expiry Docs
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="no_month_expire"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

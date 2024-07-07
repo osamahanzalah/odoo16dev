@@ -1,0 +1,14 @@
+<odoo>
+    <record id="action_server_expiry_emp_doc" model="ir.actions.server">
+        <field name="name">Expiry Documents</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="employee_documents.model_hr_employee_document"/>
+        <field name="binding_model_id" ref="employee_documents.model_hr_employee_document"/>
+        <field name="state">code</field>
+        <field name="code">action = env['hr.employee.document'].open_expiry_docs()</field>
+    </record>
+
+    <menuitem id="expiry_doc_menu" name="Expiry Documents"
+              parent="employee_documents.employee_documents_report"
+              action="action_server_expiry_emp_doc" sequence="8"/>
+</odoo>

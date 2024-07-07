@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="import_attendance_form_view" model="ir.ui.view">
+        <field name="name">import.attendance.form.view</field>
+        <field name="model">import.attendance</field>
+        <field name="arch" type="xml">
+            <form string="Import Attendance">
+                <group>
+                    <group>
+                        <field name="file" filename="filename" />
+                        <field name="filename" invisible="1"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Sheet Data">
+                        <field name="lines"  >
+                            <tree editable="bottom" create="0">
+                                <field name="employee_id"/>
+                                <field name="attendance_code"/>
+                                <field name="check_in" />
+                                <field name="check_out" />
+                                <field name="date" />
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="import_attendance" string="Import" type="object" class="oe_highlight"/>
+                    <button name="create_attendance" string="Create Attendance" attrs="{'invisible':[('lines','=',[])]}" type="object" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attendance" model="ir.actions.act_window">
+        <field name="name">Import Attendance</field>
+        <field name="res_model">import.attendance</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem name="Manage Attendances" id="menu_hr_attendance_manage_attendances"
+              parent="hr_attendance.menu_hr_attendance_root"
+			sequence="15"  />
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="action_attendance_menu" name="Import Attendance"
+              parent="menu_hr_attendance_manage_attendances"
+              action="action_attendance" sequence="1"/>
+
+</odoo>

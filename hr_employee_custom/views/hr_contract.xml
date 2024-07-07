@@ -1,0 +1,33 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='contract_type_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="employee_type_id"/>
+            </xpath>
+            <xpath expr="//page[@name='information']" position="attributes">
+                <attribute name="groups">hr_employee_custom.access_salary_info_group</attribute>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="day_value" string="Day and Hour Value" groups="hr_employee_custom.access_salary_info_group">
+                    <group>
+                        <field name="day_value"/>
+                        <field name="hour_value"/>
+                    </group>
+                    <group>
+                        <field name="no_month_days"/>
+                        <field name="workday_hours"/>
+                    </group>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record model='ir.ui.view' id='employee_document_type_tree_view'>
+        <field name="name">employee.document.type.tree</field>
+        <field name="model">employee.document.type</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="document_type_action_view" model="ir.actions.act_window">
+      <field name="name">Documents Types</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">employee.document.type</field>
+      <field name="view_mode">tree</field>
+  </record>
+
+  <menuitem id="employee_document_type_menu" name="Documents Types"
+            parent="hr.menu_human_resources_configuration"
+            action="document_type_action_view" sequence="5"/>
+
+</odoo>

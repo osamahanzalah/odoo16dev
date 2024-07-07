@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="entry_document1" model="employee.document.type">
+            <field name="name">National ID</field>
+            <field name="code">NID</field>
+        </record>
+
+        <record id="entry_document2" model="employee.document.type">
+            <field name="name">Birthdate Certificate</field>
+            <field name="code">BC</field>
+        </record>
+
+        <record id="entry_document3" model="employee.document.type">
+            <field name="name">Military Status</field>
+            <field name="code">MS</field>
+        </record>
+
+        <record id="entry_document4" model="employee.document.type">
+            <field name="name">Social Security for Social Insurance</field>
+            <field name="code">SI</field>
+        </record>
+
+        <record id="entry_document5" model="employee.document.type">
+            <field name="name">Form 6 for resigning</field>
+            <field name="code">F6</field>
+        </record>
+    </data>
+
+</odoo>

@@ -1,0 +1,68 @@
+<odoo>
+    <record id="employee_penalty_form_view" model="ir.ui.view">
+        <field name="name">employee.penalty.form.view</field>
+        <field name="model">employee.penalty</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="button_submit" type="object" string="Submit" class="oe_highlight" states="draft"/>
+                    <button name="button_approve" type="object" string="Approve" class="oe_highlight" states="submit"
+                            groups="employee_penalty.penalty_approve_group"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="penalty_type_id" required="1" attrs="{'readonly':[('state','=','approved')]}"/>
+                            <field name="employee_id" required="1" attrs="{'readonly':[('state','=','approved')]}"/>
+                            <field name="department_id"/>
+                            <field name="job_id"/>
+                        </group>
+                        <group>
+                            <field name="date" attrs="{'readonly':[('state','=','approved')]}"/>
+                            <field name="penalty_by" attrs="{'readonly':[('state','=','approved')]}"/>
+                            <field name="penalty_value" attrs="{'readonly':[('state','=','approved')]}"/>
+                            <field name="amount" attrs="{'readonly':[('state','=','approved')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="reason" attrs="{'readonly':[('state','=','approved')]}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="employee_penalty_tree_view" model="ir.ui.view">
+        <field name="name">employee.penalty.tree</field>
+        <field name="model">employee.penalty</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="employee_id"/>
+                <field name="penalty_type_id"/>
+                <field name="date"/>
+                <field name="amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="employee_penalty_action" model="ir.actions.act_window">
+        <field name="name">Employee Penalty</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.penalty</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="employee_penalty_menu"
+              name="Employee Penalty"
+              parent="employee_penalty_categ"
+              action="employee_penalty_action"
+              sequence="1"/>
+
+</odoo>

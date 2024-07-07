@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_penalty_type,employee.penalty.type,model_employee_penalty_type,base.group_user,1,1,1,1
+access_employee_penalty,employee.penalty,model_employee_penalty,base.group_user,1,1,1,1
+access_employee_allowances_type,employee.allowances.type,model_employee_allowances_type,base.group_user,1,1,1,1
+access_employee_allowances,employee.allowances,model_employee_allowances,base.group_user,1,1,1,1
+
+

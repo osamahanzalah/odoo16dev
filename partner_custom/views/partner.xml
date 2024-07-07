@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//span[@name='address_name']" position="before">
+                    <field name="partner_code" />
+                </xpath>
+                <field name="vat" position="after">
+                    <field name="partner_type" required="0"/>
+                    <field name="ambassador_name" attrs="{'invisible':[('partner_type','!=','private_cycle')]}"/>
+                    <field name="company_name" attrs="{'invisible':[('partner_type','!=','company_cycle')]}"/>
+                    <field name="national_id"/>
+                    <field name="payment_method"/>
+                    <field name="payback_method"/>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="view_partner_tree" model="ir.ui.view">
+            <field name="name">res.partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="partner_code" optional="show"/>
+                    <field name="national_id" optional="show"/>
+                    <field name="partner_type" optional="show"/>
+                    <field name="payment_method" optional="hide"/>
+                    <field name="payback_method" optional="hide"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_res_partner_filter_inherit" model="ir.ui.view">
+        <field name="name">view_res_partner_filter_inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="national_id" />
+                <field name="partner_code" />
+                <field name="payment_method" />
+                <field name="payback_method" />
+            </xpath>
+            <xpath expr="//filter[@name='group_company']" position="after">
+                <filter name="partner_type" string="Client Type" context="{'group_by': 'partner_type'}"/>
+            </xpath>
+
+        </field>
+    </record>
+    </data>
+</odoo>

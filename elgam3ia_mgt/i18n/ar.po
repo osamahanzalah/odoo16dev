@@ -1,0 +1,509 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* elgam3ia_mgt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-27 13:33+0000\n"
+"PO-Revision-Date: 2022-11-27 15:34+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow "
+"icon\" title=\"Arrow\"/>"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+msgid "Activate"
+msgstr "تفعيل"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields.selection,name:elgam3ia_mgt.selection__cycle_config__state__active
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Active"
+msgstr "نشط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__employee_id
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Ambassador"
+msgstr "السفير"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__ambassador_commission
+msgid "Ambassador commission"
+msgstr "عمولة السفير"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__amount
+msgid "Amount"
+msgstr "القيمة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__partner_id
+msgid "Client Name"
+msgstr "العميل"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields.selection,name:elgam3ia_mgt.selection__cycle_config__type__company_cycle
+msgid "Company cycle"
+msgstr "جمعية شركات"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__create_uid
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__create_date
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_bank_statement_line__cycle_id
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_move__cycle_id
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_payment__cycle_id
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__cycle_id
+msgid "Cycle"
+msgstr "الجمعيه"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_bank_statement_line__cycle_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_move__cycle_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_payment__cycle_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__cycle_code
+msgid "Cycle ID"
+msgstr "كود الجمعية "
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_bank_statement_line__cycle_line_id
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_move__cycle_line_id
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_payment__cycle_line_id
+msgid "Cycle Member Line"
+msgstr "الدور"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.inherit_account_payment_search
+msgid "Cycle Payment"
+msgstr "دفعة جمعية"
+
+#. module: elgam3ia_mgt
+#: model:ir.actions.act_window,name:elgam3ia_mgt.cycle_tree_action_window
+msgid "Cycles"
+msgstr "الجمعية"
+
+#. module: elgam3ia_mgt
+#: model:ir.ui.menu,name:elgam3ia_mgt.cycle_categ
+#: model:ir.ui.menu,name:elgam3ia_mgt.elgam3ia_mgt_root
+msgid "Cycles Mgt"
+msgstr "الجمعية"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+msgid "Date Range"
+msgstr "الفتره"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__display_name
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields.selection,name:elgam3ia_mgt.selection__cycle_config__state__draft
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__date_end
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields.selection,name:elgam3ia_mgt.selection__cycle_config__state__ended
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Ended"
+msgstr "منتهيه"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__agent_id
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Follow-up agent"
+msgstr "مسئول المتابعة "
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields.selection,name:elgam3ia_mgt.selection__cycle_config__type__general_cycle
+msgid "General cycle"
+msgstr "جمعية عامة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__id
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_needaction
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_has_error
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__invoice_ids
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_bank_statement_line__invoice_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_move__invoice_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_payment__invoice_code
+msgid "Invoice Code"
+msgstr "كود القسط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__invoice_count
+msgid "Invoice Count"
+msgstr "العدد"
+
+#. module: elgam3ia_mgt
+#: code:addons/elgam3ia_mgt/models/cycle.py:0
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+#, python-format
+msgid "Invoices"
+msgstr "الاقساط"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: elgam3ia_mgt
+#: model:ir.model,name:elgam3ia_mgt.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config____last_update
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__write_uid
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__write_date
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__line_ids
+msgid "Line"
+msgstr "عضو"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+msgid "Lines"
+msgstr "الاعضاء"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__months_no
+msgid "Number of months"
+msgstr "عدد شهور الجمعية"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_bank_statement_line__partner_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_move__partner_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_account_payment__partner_code
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__partner_code
+msgid "Partner Code"
+msgstr "كود العميل"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__payment_ids
+msgid "Payment"
+msgstr "دفعة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__payment_count
+msgid "Payment Count"
+msgstr "عدد الدفعات"
+
+#. module: elgam3ia_mgt
+#: code:addons/elgam3ia_mgt/models/cycle.py:0
+#: model:ir.model,name:elgam3ia_mgt.model_account_payment
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+#, python-format
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields.selection,name:elgam3ia_mgt.selection__cycle_config__type__private_cycle
+msgid "Private cycle"
+msgstr "جمعية سفراء"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Search"
+msgstr "بحث"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config_line__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__date_start
+msgid "Start Date"
+msgstr "تاريخ البدايه"
+
+#. module: elgam3ia_mgt
+#: code:addons/elgam3ia_mgt/models/cycle.py:0
+#, python-format
+msgid "Start Date must be less than End date!"
+msgstr "تاريخ البدايه يجب ان يكون اقل من تاريخ النهايه"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__state
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__type
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Type"
+msgstr "نوع الجمعية"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Type is company"
+msgstr "اجمعية شركات"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Type is general"
+msgstr "جمعية عامة"
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_search_view
+msgid "Type is private"
+msgstr "جمعية سفراء"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,field_description:elgam3ia_mgt.field_cycle_config__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model.fields,help:elgam3ia_mgt.field_cycle_config__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model,name:elgam3ia_mgt.model_cycle_config
+msgid "cycle.config"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model:ir.model,name:elgam3ia_mgt.model_cycle_config_line
+msgid "cycle.config.line"
+msgstr ""
+
+#. module: elgam3ia_mgt
+#: model_terms:ir.ui.view,arch_db:elgam3ia_mgt.cycle_config_form_view
+msgid "total"
+msgstr "الإجمالي"

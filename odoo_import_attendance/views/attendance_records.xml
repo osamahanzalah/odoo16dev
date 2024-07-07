@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="attendance_records_seq_tree" model="ir.ui.view">
+            <field name="name">attendance.records.tree</field>
+            <field name="model">attendance.records.lines</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Records" delete="1" create="0" edit="0">
+                    <field name="employee_id"/>
+                    <field name="attendance_code"/>
+                    <field name="check_in" />
+                    <field name="check_out" />
+                    <field name="date" />
+                    <field name="create_date" string="Create Date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_attendance_records_seq" model="ir.actions.act_window">
+            <field name="name">Attendances History</field>
+            <field name="res_model">attendance.records.lines</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="attendance_records_seq_tree"/>
+        </record>
+
+
+        <menuitem action="action_attendance_records_seq"
+                  id="attendance_records_seq_menu"
+                  parent="odoo_import_attendance.menu_hr_attendance_manage_attendances"
+                  sequence="2"
+                  active="False"
+        />
+    </data>
+</odoo>

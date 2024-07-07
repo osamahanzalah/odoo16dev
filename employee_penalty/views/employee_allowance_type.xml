@@ -1,0 +1,31 @@
+<odoo>
+    <record id="employee_allowances_type_tree_view" model="ir.ui.view">
+        <field name="name">employee.allowances.type.tree.view</field>
+        <field name="model">employee.allowances.type</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="allowances_type_action" model="ir.actions.act_window">
+        <field name="name">Allowances Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">employee.allowances.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="employee_allowances_categ"
+              name="Employee Allowances"
+              parent="om_hr_payroll.menu_hr_payroll_root"
+              sequence="81"/>
+
+    <menuitem id="allowances_type_menu"
+              name="Allowances Types"
+              parent="employee_allowances_categ"
+              action="allowances_type_action"
+              sequence="10"/>
+</odoo>

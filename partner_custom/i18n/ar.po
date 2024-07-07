@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-26 06:39+0000\n"
+"PO-Revision-Date: 2022-11-26 08:42+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__ambassador_name
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__ambassador_name
+msgid "Ambassador name"
+msgstr "اسم السفير"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__partner_type
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__partner_type
+#: model_terms:ir.ui.view,arch_db:partner_custom.view_res_partner_filter_inherit
+msgid "Client Type"
+msgstr "نوع العميل"
+
+#. module: partner_custom
+#: model:ir.model.fields.selection,name:partner_custom.selection__res_partner__partner_type__company_cycle
+msgid "Company cycle"
+msgstr "جمعية شركات"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__company_name
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__company_name
+msgid "Company name"
+msgstr "اسم الشركة"
+
+#. module: partner_custom
+#: model:ir.model,name:partner_custom.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: partner_custom
+#: model:ir.model.fields.selection,name:partner_custom.selection__res_partner__partner_type__general_cycle
+msgid "General cycle"
+msgstr "جمعية عامة"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__national_id
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__national_id
+msgid "National ID"
+msgstr "الرقم القومي"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__partner_code
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__partner_code
+msgid "Partner Code"
+msgstr "كود العميل"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__payback_method
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__payback_method
+msgid "Payback method"
+msgstr "طريقة الاسترداد"
+
+#. module: partner_custom
+#: model:ir.model.fields,field_description:partner_custom.field_res_partner__payment_method
+#: model:ir.model.fields,field_description:partner_custom.field_res_users__payment_method
+msgid "Payment method"
+msgstr "طريقة الدفع"
+
+#. module: partner_custom
+#: model:ir.model.fields.selection,name:partner_custom.selection__res_partner__partner_type__private_cycle
+msgid "Private cycle"
+msgstr "جمعية سفراء"

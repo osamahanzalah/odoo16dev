@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="seq_cycle" model="ir.sequence">
+            <field name="name">Elgam3ia Seq</field>
+            <field name="code">seq.cycle</field>
+            <field name="prefix">G/</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem id="elgam3ia_mgt_root" name="Cycles Mgt" sequence="2"
+        web_icon="elgam3ia_mgt,static/description/icon.png"/>
+        <menuitem id="cycle_categ" name="Cycles Mgt" parent="elgam3ia_mgt_root" action="elgam3ia_mgt.cycle_tree_action_window" sequence="4"/>
+    </data>
+</odoo>

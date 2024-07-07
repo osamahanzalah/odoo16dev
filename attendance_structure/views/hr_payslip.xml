@@ -1,0 +1,36 @@
+<odoo>
+    <record id="view_hr_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">view.hr.payslip.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="om_hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[2]" position="after">
+                <page name="attendance_deduction" string="Attendance Summary">
+                    <group>
+                        <group>
+                            <field name="absent_amount"/>
+                            <field name="late_amount"/>
+                        </group>
+                        <group>
+                            <field name="early_amount"/>
+                        </group>
+                    </group>
+                    <field name="deduction_ids">
+                        <tree editable="bottom">
+                            <field name="employee_id"/>
+                            <field name="name"/>
+                            <field name="date"/>
+                            <field name="check_in"/>
+                            <field name="check_out"/>
+                            <field name="hours" widget="float_time"/>
+                            <field name="applied_hours"/>
+                            <field name="payslip_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
